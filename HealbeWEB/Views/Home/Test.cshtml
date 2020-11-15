@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "HealbeTest";
+    ViewBag.IsWebpack = true;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>Test Page</div>
+<div id="render-container"></div>
+
+@await Html.PartialAsync("~/Views/Render/_RenderTest.cshtml")
+@await Html.PartialAsync("~/Views/Shared/Spinner.cshtml")
+
+@section scripts{ 
+<script src="~/bundles/testBundle.js"></script>
+}
